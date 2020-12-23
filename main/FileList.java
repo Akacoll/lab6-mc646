@@ -5,10 +5,20 @@ public class FileList {
     private ArrayList<File> files;
 
     public FileList() {
-        files = new ArrayList<File>();
+        this.files = new ArrayList<File>();
+    }
+
+    public void addFile(File file) {
+        if(!this.files.contains(file))
+            this.files.add(file);
+    }
+
+    public void removeFile(File file) {
+        if(this.files.contains(file))
+            this.files.remove(file);
     }
 
     public int numfiles(){
-        return files.size();
+        return this.files.size();
     }
 }
