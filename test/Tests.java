@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Tests{
     @Test
     public void testInitEmptyList(){
-        FileList flist = new FileList();
+        FileList flist = new FileList(10);
         assertEquals(0, flist.numfiles());
     }
     @Test
     public void testReachListLimit(){
-        FileList flist = new FileList();
+        FileList flist = new FileList(10);
         for (int i = 0; i < 11; i++){
             File file = new File("/file.txt");
             flist.addFile(file);

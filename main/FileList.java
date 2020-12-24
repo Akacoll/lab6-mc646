@@ -3,9 +3,11 @@ import java.util.ArrayList;
 
 public class FileList {
     private ArrayList<File> files;
+    private int maxFiles;
 
-    public FileList() {
+    public FileList(int maxFiles) {
         this.files = new ArrayList<File>();
+        this.maxFiles = maxFiles;
     }
 
     public int numfiles(){
@@ -13,7 +15,7 @@ public class FileList {
     }
 
     public void addFile(File file) {
-        if(this.numfiles() >= 10)
+        if(this.numfiles() >= this.maxFiles)
             this.files.remove(0);
         this.files.add(file);
     }
