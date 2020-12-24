@@ -26,7 +26,7 @@ public class Tests{
             File file = new File("/file.txt");
             flist.addFile(file);
         }
-        flist.disableUpdate();
+        flist.toggleUpdate();
         File file = new File("/file.txt");
         flist.addFile(file);
         assertEquals(3,flist.numfiles());

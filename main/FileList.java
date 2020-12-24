@@ -16,8 +16,8 @@ public class FileList {
         return this.files.size();
     }
 
-    public void disableUpdate(){
-        this.isUpdateDisabled = true;
+    public void toggleUpdate(){
+        this.isUpdateDisabled = !this.isUpdateDisabled;
     }
 
     public void addFile(File file) {
