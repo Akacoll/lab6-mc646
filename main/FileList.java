@@ -9,8 +9,8 @@ public class FileList {
     }
 
     public void addFile(File file) {
-        if(!this.files.contains(file))
-            this.files.add(file);
+//        if(!this.files.contains(file))
+        this.files.add(file);
     }
 
     public void removeFile(File file) {
